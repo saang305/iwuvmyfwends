@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>saang loves</title>
+</head>
+<body>
+  <h2>your name:</h2>
+  <input type="text" id="nameInput" placeholder="">
+  <button onclick="checkName()">submit</button>
+  <p id="message"></p>
+
+  <script>
+    // All names/messages combined in one object
+    const messages = {
+      "seonho": "i support your dreams. 응원해 선호야",
+      "samantha": "i’m so proud of you. i love you so much.",
+      "sam": "i’m so proud of you. i love you so much.",
+      "joseph": "thank you for ur unconditional love. let’s get to know each other more <3"
+    };
+
+    function checkName() {
+      const name = document.getElementById("nameInput").value.toLowerCase();
+      const messageElement = document.getElementById("message");
+
+      if (messages[name]) {
+        messageElement.textContent = messages[name];
+      } else if(name) {
+        messageElement.textContent = `You’re not my friend :(`;
+      } else {
+        messageElement.textContent = "";
+      }
+    }
+  </script>
+</body>
+</html>
